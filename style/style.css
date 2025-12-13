@@ -1,4 +1,14 @@
-* {
+@font-face {
+  font-family: Tahoma;
+  src: url('../assets/tahoma.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'ProtestGuerrilla';
+  src: url('../assets/ProtestGuerrilla.ttf') format('truetype');
+}
+
+:root {
   --text-color-1: #ffffff;
   --text-color-2: #afb6be;
 
@@ -13,6 +23,118 @@
 
   --border-radius: 10px;
   --border-radius-round: 100px;
+}
+
+@media (width <=750px) {
+
+  .logo-kitsune,
+  .logo-sport,
+  .jujitsu-giappo,
+  .karate-giappo,
+  .desc-wave,
+  .mid-wave,
+  .inside-sezione svg {
+    display: none;
+  }
+
+  .contatti ul {
+    right: 90px;
+  }
+
+  .desc {
+    padding: 50px;
+  }
+
+  .desc div {
+    max-width: 100%;
+  }
+
+  .gallery-img {
+    width: 70%;
+    min-width: 70%;
+    max-height: 250px;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .gallery {
+    justify-content: center;
+    flex-direction: column;
+    padding: 5px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .contatti ul {
+    left: 0%;
+    right: 0px;
+  }
+
+  .sezione {
+    flex: 1;
+    margin-left: 0px;
+    background: var(--corner-color);
+    width: max-content;
+  }
+
+  nav {
+    gap: 15px;
+  }
+
+  .inside-sezione {
+    padding: 0px;
+    flex: 1;
+  }
+
+  .inside-sezione a {
+    padding: 0px;
+  }
+
+  .sport,
+  .contatti,
+  li div a {
+    margin: 0 auto;
+  }
+
+  nav {
+    border: none
+  }
+}
+
+body,
+.home-btn,
+.socials-container {
+  font-family: Tahoma;
+}
+
+.body-sport,
+.kitsune {
+  font-family: "ProtestGuerrilla";
+}
+
+.kick {
+  font-family: Impact;
+}
+
+strong {
+  font-size: 110%;
+}
+
+@media (width > 750px) {
+  .gallery-img {
+    height: 250px;
+    width: 350px;
+    flex: 1;
+  }
+
+  .gallery-img:hover {
+    scale: 110%;
+  }
+
+  .gallery {
+    flex-wrap: wrap;
+    width: 70%;
+  }
 }
 
 body {
@@ -121,4 +243,220 @@ a {
 
 .associazioni img {
   height: 75px;
+}
+
+
+/*  Social  */
+.socials-container {
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+  width: min-content;
+  padding-bottom: 50px;
+}
+
+.socials-container a {
+  background-color: white;
+  padding: 1em;
+  border-radius: 50%;
+  height: 64px;
+  width: 64px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.socials-container a svg {
+  height: 32px;
+}
+
+.socials-container a::before {
+  content: attr(data-social);
+  position: absolute;
+  background-color: var(--accent-color);
+  color: white;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  border-radius: 100px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+  transform: translateY(-30px) rotate(50deg);
+  opacity: 0;
+  transition: 200ms cubic-bezier(0.42, 0, 0.44, 1.68);
+}
+
+.socials-container a:hover {
+  background-color: var(--accent-color);
+  fill: white;
+}
+
+.socials-container a::after {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 10px solid var(--accent-color);
+  transform: translateY(0) rotate(50deg);
+  opacity: 0;
+  transition: 200ms cubic-bezier(0.42, 0, 0.44, 1.68);
+}
+
+.socials-container a:hover::before {
+  transform: translateY(-65px) rotate(0);
+  opacity: 1;
+}
+
+.socials-container a:hover::after {
+  transform: translateY(-43px) rotate(0);
+  opacity: 1;
+}
+
+
+/*  Menu  */
+.menu {
+  margin: 10px;
+  padding: 0;
+  font-size: 12pt;
+}
+
+nav {
+  backdrop-filter: blur(10px);
+  height: 60px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: var(--border-radius-round);
+  border: 1px solid var(--corner-color);
+}
+
+.sezione {
+  margin-left: 10px;
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.inside-sezione,
+.inside-sezione a {
+  padding: 0 25px;
+  height: 100%;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text-color-1);
+  list-style: none;
+  display: flex;
+  transition: all 2s ease-in-out;
+  width: max-content;
+  position: relative;
+  transition: scale 0s;
+}
+
+.inside-sezione:active {
+  transform: scale(90%);
+}
+
+.inside-sezione a {
+  padding: 0 25px 0 0px;
+}
+
+.inside-sezione svg {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.inside-sezione::after {
+  content: '';
+  background: linear-gradient(to right, #a3a3a3, #c4c4c4, #a3a3a3);
+  border-radius: var(--border-radius-round);
+  height: 4px;
+  width: 0%;
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translate(-50%, 25%);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.inside-sezione:hover::after {
+  width: 70%;
+  opacity: 1;
+}
+
+nav li {
+  border-radius: var(--border-radius-round);
+  transition: all 0.3s ease-in-out;
+}
+
+nav li:hover {
+  background: var(--corner-color);
+}
+
+.sport,
+.contatti {
+  height: 100%;
+}
+
+.sport ul,
+.contatti ul {
+  top: 100%;
+  position: absolute;
+  list-style: none;
+  min-width: 100px;
+  width: max-content;
+  backdrop-filter: blur(50px);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--corner-color);
+  padding: 10px;
+  box-shadow: 0 10px 50px var(--accent-color-hover-black);
+  cursor: default;
+}
+
+.sport ul {
+  right: 0%;
+}
+
+.contatti ul {
+  right: 350px;
+  max-width: 350px;
+}
+
+.sport ul li,
+.contatti ul li {
+  margin: 15px 25px;
+  padding: 20px;
+  cursor: pointer;
+  height: 100%;
+}
+
+.sport ul li a,
+.contatti ul li {
+  color: var(--text-color-1);
+  text-decoration: none;
+  list-style: none;
+}
+
+.menu-titoli {
+  border-radius: 0px;
+  border-top: 2.5px solid var(--corner-color);
+  border-bottom: 2.5px solid var(--corner-color);
+}
+
+.menu-titoli:hover,
+.numeri-telefono:hover,
+.menu-desc:hover {
+  cursor: default;
+  background: none;
+}
+
+.menu-desc {
+  border-top: 2.5px solid var(--corner-color);
+  border-radius: 0px;
+  font-size: 80%;
+  margin: 0px;
+  padding: 0px;
 }
