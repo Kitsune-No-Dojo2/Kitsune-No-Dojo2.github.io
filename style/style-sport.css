@@ -1,0 +1,79 @@
+.container {
+  height: 100%;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.nome-sport {
+  margin: 0 auto;
+  width: fit-content;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 200%;
+  gap: 25px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: var(--border-radius-round);
+  transition: all 0.2s ease-in-out;
+}
+
+.nome-sport h1 {
+  color: var(--text-color-1);
+  margin: 0px;
+}
+
+.logo-sport {
+  height: 100px;
+  z-index: -1;
+  border-radius: var(--border-radius);
+}
+
+.logo-sport-karate {
+  height: 100px;
+  z-index: -1;
+  filter: invert(1);
+}
+
+.extra-sport {
+  border-radius: var(--border-radius);
+  display: flex;
+  margin-bottom: 100px;
+  flex-wrap: wrap;
+}
+
+.colonna {
+  min-width: 250px;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  margin: 25px;
+  text-align: center;
+  transition: all 0.4s ease-in-out;
+  border-radius: var(--border-radius);
+  background: var(--background-color-2);
+  padding: 0px 50px;
+}
+
+.colonna:hover {
+  flex: 2;
+  font-size: 150%;
+}
+
+.desc-contattaci {
+  margin-top: 100px;
+}
+
+.adulti,
+.gioco {
+  margin: 100px 0px;
+}
+
+.volantino {
+  width: 70%;
+  object-fit: cover;
+  max-width: 400px;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--corner-color);
+  margin: 50px 0px;
+}

@@ -1,0 +1,75 @@
+@media (width <=750px) {
+
+  .logo-kitsune,
+  .logo-sport,
+  .jujitsu-giappo,
+  .karate-giappo,
+  .desc-wave,
+  .mid-wave,
+  .inside-sezione svg {
+    display: none;
+  }
+
+  .contatti ul {
+    right: 90px;
+  }
+
+  .desc {
+    padding: 50px;
+  }
+
+  .desc div {
+    max-width: 100%;
+  }
+
+  .gallery-img {
+    width: 70%;
+    min-width: 70%;
+    max-height: 250px;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .gallery {
+    justify-content: center;
+    flex-direction: column;
+    padding: 5px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .contatti ul {
+    left: 0%;
+    right: 0px;
+  }
+
+  .sezione {
+    flex: 1;
+    margin-left: 0px;
+    background: var(--corner-color);
+    width: max-content;
+  }
+
+  nav {
+    gap: 15px;
+  }
+
+  .inside-sezione {
+    padding: 0px;
+    flex: 1;
+  }
+
+  .inside-sezione a {
+    padding: 0px;
+  }
+
+  .sport,
+  .contatti,
+  li div a {
+    margin: 0 auto;
+  }
+
+  nav {
+    border: none
+  }
+}

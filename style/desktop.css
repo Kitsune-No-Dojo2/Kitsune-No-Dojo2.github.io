@@ -1,0 +1,16 @@
+@media (width > 750px) {
+  .gallery-img {
+    height: 250px;
+    width: 350px;
+    flex: 1;
+  }
+
+  .gallery-img:hover {
+    scale: 110%;
+  }
+
+  .gallery {
+    flex-wrap: wrap;
+    width: 70%;
+  }
+}

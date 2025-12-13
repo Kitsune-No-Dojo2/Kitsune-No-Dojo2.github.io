@@ -1,0 +1,124 @@
+* {
+  --text-color-1: #ffffff;
+  --text-color-2: #afb6be;
+
+  --accent-color-hover-black: #00000070;
+  --accent-color-hover-white: #9b9b9b21;
+
+  --background-color: #2b4c7c;
+  --background-color-2: #182a45;
+  --background-color-3: #0a1c36;
+
+  --corner-color: #ffffff1d;
+
+  --border-radius: 10px;
+  --border-radius-round: 100px;
+}
+
+body {
+  background: var(--background-color);
+  background-size: cover;
+  margin: 0px;
+}
+
+h1,
+h2,
+h3,
+li,
+strong {
+  color: var(--text-color-1);
+  text-align: center;
+}
+
+h4,
+p,
+a {
+  color: var(--text-color-2);
+  text-align: center;
+}
+
+.mid {
+  background: var(--background-color-3);
+  margin-bottom: 100px;
+}
+
+.mid-wave {
+  background: var(--background-color-2);
+  margin-bottom: -5px;
+}
+
+.desc {
+  background: var(--background-color-2);
+}
+
+.desc div {
+  max-width: 60%;
+}
+
+.desc-wave {
+  display: block;
+}
+
+.desc-wave {
+  background: var(--background-color);
+}
+
+.kitsune {
+  margin: 0 auto;
+  width: fit-content;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 200%;
+  gap: 25px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: var(--border-radius-round);
+  transition: all 0.2s ease-in-out;
+}
+
+.kitsune h1 {
+  margin: 0px;
+}
+
+.logo-kitsune {
+  height: 100px;
+  border-radius: 100%;
+}
+
+.desc-container{
+  min-width: min-content;
+  max-width: 70%;
+  margin: 0 auto;
+  line-height: 250%;
+  display: flex;
+  align-items: center;
+}
+
+.desc-container div,
+.pos-container div {
+  margin: 0 auto;
+}
+
+.jujitsu-giappo,
+.karate-giappo {
+  min-width: 100px;
+  margin: 0px 25px;
+}
+
+.associazioni {
+  display: flex;
+  margin-right: auto;
+  width: min-content;
+  margin-left: 15px;
+  gap: 15px;
+  margin-bottom: 15px;
+  border: 1px solid var(--corner-color);
+  border-radius: var(--border-radius);
+  padding: 5px;
+  background-color: var(--text-color-2);
+}
+
+.associazioni img {
+  height: 75px;
+}
