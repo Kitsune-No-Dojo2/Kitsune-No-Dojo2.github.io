@@ -12,9 +12,6 @@
   --text-color-1: #ffffff;
   --text-color-2: #afb6be;
 
-  --accent-color-hover-black: #00000070;
-  --accent-color-hover-white: #9b9b9b21;
-
   --background-color: #2b4c7c;
   --background-color-2: #182a45;
   --background-color-3: #0a1c36;
@@ -23,37 +20,9 @@
 
   --border-radius: 10px;
   --border-radius-round: 100px;
-
-  --liquid-glass-background: rgba(255, 255, 255, 0.1);
-  --liquid-glass-background-dark: rgba(10, 10, 10, 0.1);
-  --liquid-glass-border: 1px solid rgba(255, 255, 255, 0.3);
-  --liquid-glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
-  --liquid-glass-blur: blur(5px);
 }
 
 @media (width <=750px) {
-
-  .logo-kitsune,
-  .logo-sport,
-  .jujitsu-giappo,
-  .karate-giappo,
-  .desc-wave,
-  .mid-wave,
-  .inside-sezione svg {
-    display: none;
-  }
-
-  .contatti ul {
-    right: 90px;
-  }
-
-  .desc {
-    padding: 50px;
-  }
-
-  .desc div {
-    max-width: 100%;
-  }
 
   .gallery-img {
     width: 70%;
@@ -66,9 +35,7 @@
   .gallery {
     justify-content: center;
     flex-direction: column;
-    padding: 5px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 50px 5px;
   }
 
   .contatti ul {
@@ -145,8 +112,8 @@ strong {
 
 body {
   background: var(--background-color);
-  background-size: cover;
   margin: 0px;
+  text-align: center;
 }
 
 h1,
@@ -155,24 +122,23 @@ h3,
 li,
 strong {
   color: var(--text-color-1);
-  text-align: center;
 }
 
 h4,
 p,
 a {
   color: var(--text-color-2);
-  text-align: center;
 }
 
-.mid {
-  background: var(--background-color-3);
-  margin-bottom: 100px;
+.title {
+  font-family: "ProtestGuerrilla";
+  font-size: 4vw;
+  margin: 0px;
 }
 
-.mid-wave {
-  background: var(--background-color-2);
-  margin-bottom: -5px;
+.logo{
+  margin: 50px;
+  height: 200px;
 }
 
 .desc {
@@ -183,12 +149,9 @@ a {
   max-width: 60%;
 }
 
-.desc-wave {
-  display: block;
-}
-
-.desc-wave {
-  background: var(--background-color);
+.description {
+  padding: 50px;
+  display: flex;
 }
 
 .kitsune {
@@ -223,13 +186,12 @@ a {
   align-items: center;
 }
 
-.desc-container div,
-.pos-container div {
+.desc-container div {
   margin: 0 auto;
 }
 
-.jujitsu-giappo,
-.karate-giappo {
+.jujitsu-text,
+.karate-text {
   min-width: 100px;
   margin: 0px 25px;
 }
