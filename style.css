@@ -1,11 +1,11 @@
 @font-face {
   font-family: Tahoma;
-  src: url('../assets/tahoma.ttf') format('truetype');
+  src: url('assets/tahoma.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'ProtestGuerrilla';
-  src: url('../assets/ProtestGuerrilla.ttf') format('truetype');
+  src: url('assets/ProtestGuerrilla.ttf') format('truetype');
 }
 
 :root {
@@ -20,6 +20,7 @@
 }
 
 body {
+  font-family: "Tahoma";
   background: var(--background-color);
   margin: 0px;
   text-align: center;
@@ -66,6 +67,10 @@ a {
   background: var(--secondary-background-color);
   box-sizing: border-box;
   border-radius: var(--border-radius);
+}
+
+.description p {
+  line-height: 35px;
 }
 
 .associations {
