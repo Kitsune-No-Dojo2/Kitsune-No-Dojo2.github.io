@@ -4,6 +4,11 @@
 }
 
 @font-face {
+  font-family: "Tahoma-bold";
+  src: url('assets/tahoma-bold.ttf') format('truetype');
+}
+
+@font-face {
   font-family: 'ProtestGuerrilla';
   src: url('assets/ProtestGuerrilla.ttf') format('truetype');
 }
@@ -14,9 +19,17 @@
 
   --background-color: #2b4c7c;
   --secondary-background-color: #182a45;
+  --third-background-color: #0a1c36;
 
   --border-radius: 20px;
   --border-radius-round: 100px;
+
+  --border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+* {
+  box-sizing: border-box;
+  corner-shape: squircle;
 }
 
 body {
@@ -24,20 +37,57 @@ body {
   background: var(--background-color);
   margin: 0px;
   text-align: center;
+  font-size: 1vw;
 }
 
 h1,
 h2,
 h3,
-li,
-strong {
+h4,
+h5,
+h6,
+strong,
+button {
   color: var(--text-color-1);
+  font-family: "Tahoma-bold";
 }
 
-h4,
 p,
-a {
+a{
   color: var(--text-color-2);
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 4vw;
+}
+
+h2 {
+  font-size: 3vw;
+}
+
+h3 {
+  font-size: 2vw;
+}
+
+h4 {
+  font-size: 1.75vw;
+}
+
+h5 {
+  font-size: 1.5vw;
+}
+
+h6 {
+  font-size: 1.25vw;
+}
+
+button {
+  font-size: 1.25vw;
+  background: var(--secondary-background-color);
+  border: var(--border);
+  border-radius: var(--border-radius);
+  cursor: pointer;
 }
 
 .logo{
@@ -47,7 +97,6 @@ a {
 
 .title {
   font-family: "ProtestGuerrilla";
-  font-size: 4vw;
   margin: 0px;
 }
 
@@ -65,7 +114,6 @@ a {
   padding: 50px;
   width: 50%;
   background: var(--secondary-background-color);
-  box-sizing: border-box;
   border-radius: var(--border-radius);
 }
 
@@ -80,7 +128,6 @@ a {
   margin-left: 15px;
   gap: 15px;
   margin-bottom: 15px;
-  border: 1px solid var(--corner-color);
   border-radius: var(--border-radius);
   padding: 5px;
   background-color: var(--text-color-2);
@@ -104,9 +151,6 @@ a {
   background-color: white;
   padding: 1em;
   border-radius: 50%;
-  height: 64px;
-  width: 64px;
-  box-sizing: border-box;
   flex-shrink: 0;
   display: grid;
   place-items: center;
@@ -122,7 +166,6 @@ a {
   position: absolute;
   background-color: var(--accent-color);
   color: white;
-  text-decoration: none;
   padding: 0.5em 1em;
   border-radius: 100px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
@@ -157,4 +200,31 @@ a {
 .socials-container a:hover::after {
   transform: translateY(-43px) rotate(0);
   opacity: 1;
+}
+
+
+/*  Menu  */
+.menu-button {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 15px 30px;
+}
+
+
+/*  Home button  */
+.home-button {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 300px;
+  margin: 0 auto;
+  padding: 30px;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  background: var(--secondary-background-color);
+  border: var(--border);
+}
+
+.home-button p {
+  margin: 0 auto;
 }
